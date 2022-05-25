@@ -16,7 +16,7 @@ public class Controller {
 
 	YahooFinance yahooFinance = new YahooFinance();
 
-
+//https://github.com/MathiasPal/StockAnalyzer
 
 	public void process(String ticker) {
 		System.out.println("Start process");
