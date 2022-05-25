@@ -1,4 +1,4 @@
-package stockanalyzer.downloader;
+package downloader;
 
 import java.util.List;
 

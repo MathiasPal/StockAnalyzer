@@ -28,7 +28,7 @@ public class YahooFinance {
         try {
             obj = new URL(query);
         } catch (MalformedURLException e) {
-            UserInterface.print(URL_YAHOO + "is not reachable.");
+            UserInterface.print(URL_YAHOO + "is not reachable. Check your internet connection");
             //e.printStackTrace();
         }
         catch (NullPointerException e) {
@@ -46,7 +46,7 @@ public class YahooFinance {
             in.close();
         } catch (IOException e) {
             //e.printStackTrace();
-            UserInterface.print(URL_YAHOO + "is not reachable. Check your internet connection");
+            UserInterface.print(URL_YAHOO + "is not reachable. Check the URL");
         }
         return response.toString();
     }
@@ -86,7 +86,7 @@ public class YahooFinance {
         try {
              result  = objectMapper.readValue(jsonResponse, YahooResponse.class);
         } catch (JsonProcessingException e) {
-            UserInterface.print("While accessing the Data an error occured.");
+            UserInterface.print("While accessing the Data an error occured. It seems like there is no Data available");
             //e.printStackTrace();
         }
         return result;
